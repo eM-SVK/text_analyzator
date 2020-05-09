@@ -1,5 +1,3 @@
-from pprint import pprint as pp
-
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer, 
 Fossil Butte is a ruggedly impressive 
@@ -118,10 +116,13 @@ text_druha_faza = text_cistenie_dva.split()
 
 
 pocty = {}
+pocty_tu = dict.items(pocty)
 
 for dlzka in text_druha_faza:
     pocet = len(dlzka)
     pocty[pocet] = pocty.get(pocet, 0) + 1
-    
-    
-pp(pocty)
+   
+
+for i, j in pocty_tu:
+    print(j, '*' * int(i), i)
+
